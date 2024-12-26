@@ -1,0 +1,15 @@
+@use "../abstracts";
+.button {
+    background-color: abstracts.$primary-color;
+    color: #fff;
+    padding: abstracts.$spacing-unit;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken(abstracts.$primary-color, 10%);
+    }
+  }
+  

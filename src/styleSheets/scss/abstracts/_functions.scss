@@ -1,1 +1,5 @@
-
+// Function to calculate rem from px
+@function px-to-rem($px) {
+    @return $px / 16 * 1rem;
+  }
+  

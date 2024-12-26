@@ -1,0 +1,26 @@
+@use "../abstracts" as abstracts;
+body {
+    background-color: abstracts.$background-color;
+    line-height: 1.6;
+    padding: abstracts.$spacing-unit;
+    min-height: 100vh;
+}
+#root {
+    height: 100vh;
+    min-height: 100vh;
+  }
+  
+a {
+    text-decoration: none;
+    color: abstracts.$primary-color;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        color: rgb(6, 88, 6);
+        transform: skew(2100%);
+        -webkit-transform: skew(2100%);
+        -moz-transform: skew(2100%);
+        -ms-transform: skew(2100%);
+        -o-transform: skew(2100%);
+    }
+}

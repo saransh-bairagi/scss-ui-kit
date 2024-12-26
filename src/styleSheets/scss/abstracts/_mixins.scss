@@ -1,1 +1,39 @@
+// Mixin for centering elements
+@mixin center($x: 50%, $y: 50%) {
+    position: absolute;
+    top: $y;
+    left: $x;
+    transform: translate(-$x, -$y);
+}
 
+// Mixin for responsive media queries
+@mixin media($breakpoint) {
+    @if $breakpoint == "sm" {
+        @media (max-width: 576px) {
+            @content;
+        }
+    } @else if $breakpoint == "md" {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $breakpoint == "lg" {
+        @media (max-width: 992px) {
+            @content;
+        }
+    } @else if $breakpoint == "xl" {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+// Mixing for flexbox
+@mixin flex-parent($vertical, $horizontal, $dir) {
+    @if $dir== "col" {
+        align-items: $horizontal;
+        justify-content: $vertical;
+    } @else {
+        align-items: $vertical;
+        justify-content: $horizontal;
+    }
+}

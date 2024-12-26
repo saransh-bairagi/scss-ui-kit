@@ -1,0 +1,122 @@
+@use "../abstracts/" as abstracts;
+
+// Width 100%
+.w-full {
+    width: 100%;
+}
+
+// Height 100%
+.h-full {
+    height: 100%;
+}
+
+// Width 50%
+.w-half {
+    width: 50%;
+}
+
+// Height 50%
+.h-half {
+    height: 50%;
+}
+
+// Height 1/3
+.h-third {
+    height: 33%;
+}
+
+// Width 1/3
+.w-third {
+    width: 33%;
+}
+
+// Background Screen
+.bg-red {
+    background-color: red;
+}
+
+// Screen Vertical and Horizontal
+.screen-h {
+    height: 100vh;
+}
+.screen-w {
+    width: 100vw;
+}
+
+// Flex and Grid
+
+// Basic Flexbox
+.flex {
+    display: flex;
+}
+
+.flex-h {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-v-t-l {
+    @include abstracts.flex-parent(flex-start, flex-start, col);
+}
+
+// Flexbox Alignment and Distribution
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+// Grid Layout
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-gap {
+    display: grid;
+    gap: 1rem;
+}
+
+// Abstracts Mixins Example (assuming you are defining flex-parent in your abstracts.scss)
+@mixin flex-parent($justify, $align, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}

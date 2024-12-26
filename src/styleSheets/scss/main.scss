@@ -1,10 +1,9 @@
-// abstracts
-// <-variables->
+// Import individual modules(with _index files included)
 @use "abstracts";
-
-// <-mixins->
-// @use "abstracts/mixins";
-
-// base
-// <-variables->
-// @use "base/reset";
+@use "base";
+@use "components";
+@use "fonts";
+@use "layouts";
+@use "pages";
+@use "themes";
+@use "utilities";
